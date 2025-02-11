@@ -1,10 +1,19 @@
 import "../scss/App.scss";
+import React from "react";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
 
 function App() {
-
     return (
-        <h1>Hola!!</h1>
+        <>
+            <Header />
+            <Hero />
+            <Gallery />
+            <Footer />
+        </>
     )
 }
 
-export default App
+export default App;
