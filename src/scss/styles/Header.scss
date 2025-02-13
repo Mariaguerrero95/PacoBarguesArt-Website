@@ -107,7 +107,44 @@
     }
     
 }
+@media screen and (min-width: 1025px) {
+    .headerTop {
+        display: flex;
+        justify-content: space-between; /* Distribuye el espacio entre el logo y el menú */
+        align-items: center;
+        width: 100%;
+    }
+    .desktopHidden {
+        display: none !important;
+    }
+    
+    .desktopVisible {
+        margin-left: 60px;
+        display: flex !important;
+        justify-content: flex-end; 
+        position: static;
+        height: auto;
+        background: transparent;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+        
 
+        .headerList {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            font-size: 14px;
+            list-style: none;
+            margin-left: auto; /* Empuja los elementos hacia la derecha */
+        }
+    }
+    .brandName {
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        flex-shrink: 0; /* Evita que se reduzca demasiado */
+    }
+}
 
 
 

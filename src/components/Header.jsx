@@ -11,20 +11,20 @@ const Header = ({ menuOpen, setMenuOpen }) => {
 
                 {/* Icono de hamburguesa o X */}
                 <div
-                    className={`menuIcon ${menuOpen ? "hidden" : ""}`} // Si el menú está abierto, ocultamos la hamburguesa
+                    className={`menuIcon ${menuOpen ? "hidden" : ""} desktopHidden`} // Si el menú está abierto, ocultamos la hamburguesa
                     onClick={() => setMenuOpen(true)}
                 >
                     ☰
                 </div>
                 <div
-                    className={`closeIcon ${menuOpen ? "" : "hidden"}`} // Si el menú está cerrado, ocultamos la X
+                    className={`closeIcon ${menuOpen ? "" : "hidden"} desktopHidden`} // Si el menú está cerrado, ocultamos la X
                     onClick={() => setMenuOpen(false)}
                 >
                     ✖
                 </div>
 
                 {/* Menú de navegación */}
-                <nav className={`menuHeader ${menuOpen ? "open" : ""}`}>
+                <nav className={`menuHeader ${menuOpen ? "open" : ""} desktopVisible`}>
                     <ul className="headerList">
                         <li>ABOUT</li>
                         <li>GALLERY</li>
