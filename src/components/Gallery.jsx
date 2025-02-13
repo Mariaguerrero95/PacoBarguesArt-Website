@@ -7,7 +7,7 @@ const Gallery = ({ imageCount }) => {
     const [hoveredImage, setHoveredImage] = useState(null);
 
     // Ruta de las imágenes que se encuentran en la carpeta 'public/Gallery'
-    const images = Array.from({ length: imageCount }, (_, i) => `Gallery/${i + 1}.jpeg`);
+    const images = Array.from({ length: imageCount }, (_, i) => `./Gallery/${i + 1}.jpeg`);
 
     return (
         <div className="galleryContainer">
