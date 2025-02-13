@@ -1,20 +1,115 @@
 @import '../core/variables';
-header {
-    text-align: center;
+
+.headerContainer {
+    width: 100%;
+    padding: 20px 40px;
+    .headerTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #494848;
+        padding-bottom: 10px;
+
+        .brandName {
+            font-size: 14px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+
+        /* Icono del menú (hamburguesa o X) */
+        .menuIcon,
+        .closeIcon {
+                font-size: 30px;
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 38px;
+                z-index: 1001;
+            
+    
+        }
+
+        /* Menú de navegación */
+        .menuHeader {
+            .headerList {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                font-size: 14px;
+                font-weight: 100;
+                li {
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainTitle {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 15vw;
+    }
 }
-.firstTitle{
-    font-weight: 100;
-    margin-top: 40px;
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
 }
-.menuHeader{
-    font-weight: 100;
+
+/* Estilos para cuando el menú está abierto */
+.menuHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    transform: translateY(-100%);  /* Menú oculto por defecto */
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, visibility 0s 0.3s, opacity 0.3s ease;
+    z-index: 1000;
+
+    .headerList {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
 }
-.headerList{
-    display: flex;
+
+/* Cuando el menú está abierto */
+.menuHeader.open {
+    transform: translateY(0);  /* El menú se desliza hacia abajo */
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, visibility 0s, opacity 0.3s ease;
 }
-.headerList li{
-    margin: 0 20px; 
+
+@media screen and (max-width: 1024px) {
+    .headerTop {
+        .menuIcon {
+            display: block;  /* Mostrar el icono solo en pantallas pequeñas */
+        }
+
+        /* Cuando el menú está abierto, mostramos la X */
+        .closeIcon {
+            display: block;
+        }
+    }
+    
 }
+
+
+
+
+
+
