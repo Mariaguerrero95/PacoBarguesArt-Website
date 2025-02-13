@@ -1,6 +1,19 @@
 @import '../core/variables';
-.galleryText{
-    font-weight: 100;
-    text-align: center;
-    margin-top: 50px;
+.galleryContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 20px;
+}
+.galleryImage {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.galleryImage.hovered {
+    transform: scale(1.5);
+    z-index: 10;
 }

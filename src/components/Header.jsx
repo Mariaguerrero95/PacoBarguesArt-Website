@@ -45,36 +45,6 @@ Header.propTypes = {
 
 export default Header;
 
-
-{/*const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen); // Cambia el estado del menú
-    };
-
-
-    return (
-        <header className="headerContainer">
-            <div className="headerTop">
-                <p className="brandName">PACO BARGUES ART</p>
-                <div className="menuIcon" onClick={toggleMenu}>
-                    {menuOpen ? "✖" : "☰"}
-                </div>
-                <nav className={`menuHeader ${menuOpen ? "open" : ""}`}>
-                    <ul className="headerList">
-                        <li>ABOUT</li>
-                        <li>GALLERY</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </nav>
-            </div>
-            <h1 className="mainTitle">BARGUES</h1>
-        </header>
-    );
-};
-
-export default Header;*/}
-
 {/*<div className="socialIcons">
                 <a href="https://www.facebook.com/share/18NwgrrqT4/?mibextid=wwXIfr" 
                 target="_blank" 

@@ -12,7 +12,7 @@ function App() {
         <>
             <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Hero />
-            <Gallery />
+            <Gallery imageCount={138}/>
             <Footer />
         </>
     )
