@@ -1,6 +1,70 @@
 @import '../core/variables';
-.heroTitle{
-    font-weight: 100;
+
+.heroContainer {
     text-align: center;
-    margin-top: 50px;
+    margin: 20px;
+}
+
+.heroImages {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px; /* Ajustamos para más espacio debajo de las imágenes */
+}
+
+.heroImage {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heroImage.hovered {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.viewMoreWrapper {
+    margin-top: 50px; /* Aumentamos el espacio entre el botón y las imágenes */
+}
+
+.viewMoreButton {
+    padding: 12px 24px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.viewMoreButton:hover {
+    background-color: #444;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+.viewMoreButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #aaa; /* Sombra de enfoque */
+}
+@media screen and (max-width: 768px) {
+    .heroImages {
+        flex-direction: column; /* Las imágenes se apilan verticalmente */
+        align-items: center; /* Alineamos las imágenes al centro */
+        margin-top: 40px; /* Más espacio arriba para que no se solapen con el header */
+    }
+
+    .heroImage {
+        width: 200px; /* Las imágenes ocupan todo el ancho disponible */
+        height: 200px; /* Mantienen sus proporciones */
+        margin-bottom: 20px; /* Espaciado entre imágenes */
+    }
+
+    .viewMoreButton {
+        font-size: 16px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 10px 20px;
+    }
 }
