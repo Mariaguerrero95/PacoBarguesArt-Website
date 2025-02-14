@@ -29,7 +29,7 @@ const Hero = () => {
 
             {/* Botón de "Ver más" */}
             <div className="viewMoreContainer">
-                <Link to="/gallery" className="viewMoreButton">Ver más</Link> {/* Enlace para navegar a la galería */}
+                <Link to="/gallery" className="viewMoreButton">VER MÁS</Link> {/* Enlace para navegar a la galería */}
             </div>
         </div>
     );

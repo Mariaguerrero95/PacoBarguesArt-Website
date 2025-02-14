@@ -15,9 +15,7 @@ function App() {
         <>
             <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Routes>
-                {/* Ruta principal: Muestra el Hero y las 3 imágenes de la galería */}
-                <Route path="/" element={<><Hero imageCount={3} /></>} /> {/* Añadido Gallery aquí */}
-                {/* Ruta de galería completa */}
+                <Route path="/" element={<><Hero imageCount={3} /></>} /> 
                 <Route path="/gallery" element={<Gallery imageCount={135} />} /> 
             </Routes>
             <Footer />
@@ -29,24 +27,3 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-
-{/*function App() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    return (
-        <>
-            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Hero />
-            <Gallery imageCount={136}/>
-            <Footer />
-        </>
-    )
-}
-
-export default App;*/}

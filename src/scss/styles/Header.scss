@@ -1,5 +1,4 @@
 @import '../core/variables';
-
 .headerContainer {
     width: 100%;
     padding: 20px 40px;
@@ -9,14 +8,11 @@
         align-items: center;
         border-bottom: 1px solid #494848;
         padding-bottom: 10px;
-
         .brandName {
             font-size: 14px;
             font-weight: 100;
             text-transform: uppercase;
         }
-
-        /* Icono del menú (hamburguesa o X) */
         .menuIcon,
         .closeIcon {
                 font-size: 30px;
@@ -26,11 +22,7 @@
                 top: 10px;
                 right: 38px;
                 z-index: 1001;
-            
-    
         }
-
-        /* Menú de navegación */
         .menuHeader {
             .headerList {
                 list-style: none;
@@ -47,20 +39,15 @@
             }
         }
     }
-
     .mainTitle {
         text-align: center;
         margin-top: 30px;
         font-size: 15vw;
     }
 }
-
-/* Clase para ocultar elementos */
 .hidden {
     display: none !important;
 }
-
-/* Estilos para cuando el menú está abierto */
 .menuHeader {
     position: fixed;
     top: 0;
@@ -72,35 +59,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-100%);  /* Menú oculto por defecto */
+    transform: translateY(-100%); 
     visibility: hidden;
     opacity: 0;
     transition: transform 0.3s ease-in-out, visibility 0s 0.3s, opacity 0.3s ease;
     z-index: 1000;
-
     .headerList {
         flex-direction: column;
         gap: 20px;
         font-size: 24px;
         text-align: center;
+        color: black;
     }
 }
-
-/* Cuando el menú está abierto */
 .menuHeader.open {
-    transform: translateY(0);  /* El menú se desliza hacia abajo */
+    transform: translateY(0);  
     visibility: visible;
     opacity: 1;
     transition: transform 0.3s ease-in-out, visibility 0s, opacity 0.3s ease;
 }
-
+a, .headerList a {
+    text-decoration: none; 
+    color: inherit;
+}
 @media screen and (max-width: 1024px) {
     .headerTop {
         .menuIcon {
-            display: block;  /* Mostrar el icono solo en pantallas pequeñas */
+            display: block; 
         }
-
-        /* Cuando el menú está abierto, mostramos la X */
         .closeIcon {
             display: block;
         }
@@ -129,8 +115,6 @@
         visibility: visible;
         opacity: 1;
         transition: none;
-        
-
         .headerList {
             display: flex;
             flex-direction: row;

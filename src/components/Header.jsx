@@ -1,9 +1,13 @@
 import "../scss/styles/Header.scss";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom"; 
 //import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
+    const handleLinkClick = () => {
+        setMenuOpen(false); 
+    };
     return (
         <header className="headerContainer">
             <div className="headerTop">
@@ -25,10 +29,16 @@ const Header = ({ menuOpen, setMenuOpen }) => {
 
                 {/* Menú de navegación */}
                 <nav className={`menuHeader ${menuOpen ? "open" : ""} desktopVisible`}>
-                    <ul className="headerList">
-                        <li>ABOUT</li>
-                        <li>GALLERY</li>
-                        <li>CONTACT</li>
+                <ul className="headerList">
+                        <li>
+                            <Link to="/about" onClick={handleLinkClick}>ABOUT</Link> {/* Aquí se cierra el menú */}
+                        </li>
+                        <li>
+                            <Link to="/gallery" onClick={handleLinkClick}>GALLERY</Link> {/* Aquí se cierra el menú */}
+                        </li>
+                        <li>
+                            <Link to="/contact" onClick={handleLinkClick}>CONTACT</Link> {/* Aquí se cierra el menú */}
+                        </li>
                     </ul>
                 </nav>
             </div>
