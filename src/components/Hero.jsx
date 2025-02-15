@@ -6,7 +6,7 @@ const Hero = () => {
     const [hoveredImage, setHoveredImage] = useState(null);
 
     // Ruta de las imágenes que se encuentran en la carpeta 'public/Gallery'
-    const images = Array.from({ length: 135 }, (_, i) => `public/Gallery/${i + 1}.jpeg`);
+    const images = Array.from({ length: 135 }, (_, i) => `./Gallery/${i + 1}.jpeg`);
 
     // Limitar a las primeras 3 imágenes
     const firstThreeImages = images.slice(0, 3);
