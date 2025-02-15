@@ -1,0 +1,35 @@
+@import '../core/variables';
+.aboutSection{
+    text-align: center;
+    margin-left: 180px;
+    margin-right: 180px;
+        .aboutSectionH2{
+            font-size: 30px;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .aboutSectionP{
+            font-weight: 100;
+            margin-top: 15px;
+            margin-bottom: 100px;
+        }
+}
+@media (max-width: 767px) {
+    .aboutSection{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 70px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+}
+@media (max-width: 1024px) {
+    .aboutSection{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 90px;
+    margin-right: 90px;
+    }}
+

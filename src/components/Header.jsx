@@ -12,8 +12,6 @@ const Header = ({ menuOpen, setMenuOpen }) => {
         <header className="headerContainer">
             <div className="headerTop">
                 <p className="brandName">PACO BARGUES ART</p>
-
-                {/* Icono de hamburguesa o X */}
                 <div
                     className={`menuIcon ${menuOpen ? "hidden" : ""} desktopHidden`} // Si el menú está abierto, ocultamos la hamburguesa
                     onClick={() => setMenuOpen(true)}
@@ -26,18 +24,16 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                 >
                     ✖
                 </div>
-
-                {/* Menú de navegación */}
                 <nav className={`menuHeader ${menuOpen ? "open" : ""} desktopVisible`}>
                 <ul className="headerList">
                         <li>
-                            <Link to="/about" onClick={handleLinkClick}>ABOUT</Link> {/* Aquí se cierra el menú */}
+                            <a href="#about" onClick={handleLinkClick}>ACERCA DE</a>
                         </li>
                         <li>
-                            <Link to="/gallery" onClick={handleLinkClick}>GALLERY</Link> {/* Aquí se cierra el menú */}
+                            <Link to="/gallery" onClick={handleLinkClick}>GALERÍA</Link>
                         </li>
                         <li>
-                            <Link to="/contact" onClick={handleLinkClick}>CONTACT</Link> {/* Aquí se cierra el menú */}
+                            <a href="#contact" onClick={handleLinkClick}>CONTACTO</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +43,6 @@ const Header = ({ menuOpen, setMenuOpen }) => {
     );
 };
 
-// Validación de las props
 Header.propTypes = {
     menuOpen: PropTypes.bool.isRequired,
     setMenuOpen: PropTypes.func.isRequired,
