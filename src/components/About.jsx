@@ -1,6 +1,6 @@
 import "../scss/styles/About.scss";
 import React from "react";
-
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const About = () => {
     return (
@@ -11,7 +11,20 @@ const About = () => {
             A través del collage, Bargues reinterpreta el mundo, desestructurando y reorganizando elementos cotidianos para construir nuevas perspectivas. Su arte no solo es una representación, sino una experiencia sensorial que desafía las convenciones y da espacio a la imaginación.
             Bargues no solo pinta; crea mundos dentro de mundos, uniendo fragmentos de historias, culturas y conceptos para ofrecer una mirada fresca y única a la abstracción. 
             Pintor ubicado en Valencia, costa este en España.</p>
+            <div className="socialIcons">
+                <a href="https://www.facebook.com/share/18NwgrrqT4/?mibextid=wwXIfr" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <FaFacebookF className="icon" />
+                </a>
+                <a href="https://www.instagram.com/collagebargues?igsh=MXMzYzY1dnRyb3J6eg==" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <FaInstagram className="icon" />
+                </a>
+            </div>
         </section>
+        
         
     );
 };

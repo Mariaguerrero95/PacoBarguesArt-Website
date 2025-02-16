@@ -1,12 +1,23 @@
 import "../scss/styles/Header.scss";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom"; 
-//import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
-    const handleLinkClick = () => {
-        setMenuOpen(false); 
+    const location = useLocation(); // Detectar la ruta actual
+
+    const handleLinkClick = (sectionId) => {
+        setMenuOpen(false);
+
+        // Si ya estamos en "/", hacer scroll directo
+        if (location.pathname === "/") {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            // Si estamos en otra ruta, ir a "/" y hacer scroll después de cargar
+            setTimeout(() => {
+                document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+            }, 300);
+        }
     };
     return (
         <header className="headerContainer">
@@ -26,14 +37,14 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                 </div>
                 <nav className={`menuHeader ${menuOpen ? "open" : ""} desktopVisible`}>
                 <ul className="headerList">
-                        <li>
-                            <a href="#about" onClick={handleLinkClick}>ACERCA DE</a>
+                <li>
+                            <Link to="/" onClick={() => handleLinkClick("about")}>ACERCA DE</Link>
                         </li>
                         <li>
                             <Link to="/gallery" onClick={handleLinkClick}>GALERÍA</Link>
                         </li>
                         <li>
-                            <a href="#contact" onClick={handleLinkClick}>CONTACTO</a>
+                            <Link to="/" onClick={() => handleLinkClick("contact")}>CONTACTO</Link>
                         </li>
                     </ul>
                 </nav>
@@ -50,15 +61,3 @@ Header.propTypes = {
 
 export default Header;
 
-{/*<div className="socialIcons">
-                <a href="https://www.facebook.com/share/18NwgrrqT4/?mibextid=wwXIfr" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                <FaFacebookF className="icon" />
-                </a>
-                <a href="https://www.instagram.com/collagebargues?igsh=MXMzYzY1dnRyb3J6eg==" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                <FaInstagram className="icon" />
-                </a>
-</div>*/}

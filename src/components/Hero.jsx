@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
     const [hoveredImage, setHoveredImage] = useState(null);
-    const images = Array.from({ length: 135 }, (_, i) => `./Gallery/${i + 1}.jpeg`);
+    const images = Array.from({ length: 134 }, (_, i) => `./Gallery/${i + 1}.jpeg`);
     const firstThreeImages = images.slice(0, 3);
 
     return (
