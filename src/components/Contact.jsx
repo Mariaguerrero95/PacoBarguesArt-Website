@@ -25,7 +25,7 @@ const Contact = () => {
         e.preventDefault();
 
         // Enviar datos al servidor o Formspree
-        const response = await fetch("", {
+        const response = await fetch("https://formspree.io/f/xbldpngg", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
